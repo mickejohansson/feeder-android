@@ -1,9 +1,11 @@
-package org.mikaeljohansson.feeder;
+package org.mikaeljohansson.feeder.presentation;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import org.mikaeljohansson.feeder.R;
 
 
 public class MainActivity extends ActionBarActivity {
