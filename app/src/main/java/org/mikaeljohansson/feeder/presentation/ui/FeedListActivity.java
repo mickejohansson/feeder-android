@@ -1,19 +1,25 @@
-package org.mikaeljohansson.feeder.presentation;
+package org.mikaeljohansson.feeder.presentation.ui;
 
+import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import org.mikaeljohansson.feeder.R;
+import org.mikaeljohansson.feeder.presentation.presenter.FeedListPresenter;
 
 
-public class MainActivity extends ActionBarActivity {
+public class FeedListActivity extends ActionBarActivity implements FeedListPresenter.FeedListView {
+
+    private FeedListPresenter mFeedListPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mFeedListPresenter = new FeedListPresenter(this);
     }
 
 
@@ -37,5 +43,19 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
+
+        mFeedListPresenter.onCreate();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        mFeedListPresenter.onStop();
     }
 }
