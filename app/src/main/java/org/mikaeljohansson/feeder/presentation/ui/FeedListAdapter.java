@@ -15,8 +15,6 @@ import java.util.Collection;
 
 public class FeedListAdapter extends BaseAdapter {
 
-    private static final long ITEM_ID_POST = 0;
-
     private final Context mContext;
     private ArrayList<Post> mPosts = new ArrayList<>();
 

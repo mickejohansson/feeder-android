@@ -1,6 +1,6 @@
 package org.mikaeljohansson.feeder.model;
 
-public class RepositoryError {
+public class ErrorBundle {
     private String mErrorMessage;
     private Exception mException;
 

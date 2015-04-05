@@ -22,6 +22,7 @@ public class FeedListActivity extends ActionBarActivity implements FeedListPrese
 
     @InjectView(R.id.feedlistview)
     ListView mListView;
+
     private FeedListAdapter mFeedListAdapter;
 
 
